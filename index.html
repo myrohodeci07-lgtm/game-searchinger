@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук ігор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Модальне вікно -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">
+            &times;
+        </span>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <img src="gamepad.png" alt="Game Logo">
+            <span>GameFinder</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" onclick="openModal('about')">Про сайт</a>
+            <a href="#" onclick="openModal('popular')">Популярні ігри</a>
+            <a href="#" onclick="openModal('news')">Новинки</a>
+            <a href="#" onclick="openModal('authors')">Автори</a>
+        </nav>
+    </header>
+
+    <h2>Знайди свою гру</h2>
+    <p>Забув назву гри — знайди її</p>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Яку гру шукаємо?">
+
+        <div class="bottom-row">
+
+            <select id="gameTypeSelect">
+                <option value="">Тип гри</option>
+                <option value="single">Одиночна</option>
+                <option value="multiplayer">Мультиплеєр</option>
+                <option value="story">Сюжетна</option>
+            </select>
+
+            <button type="submit" id="searchButton">
+                Знайти
+            </button>
+
+            <select id="gameGenreSelect">
+                <option value="">Жанр гри</option>
+                <option value="action">Екшн</option>
+                <option value="role-playing-games-rpg">RPG</option>
+                <option value="strategy">Стратегія</option>
+                <option value="horror">Хоррор</option>
+                <option value="survival">Виживання</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="games-grid" id="gamesGrid">
+
+        <a href="#" class="game-card">
+            <img src="images.jpg" alt="Cyberpunk">
+            <div class="game-card-title">
+                Cyberpunk 2077
+            </div>
+        </a>
+
+        <a href="#" class="game-card">
+            <img src="images (1).jpg" alt="Witcher">
+            <div class="game-card-title">
+                The Witcher 3
+            </div>
+        </a>
+
+        <a href="#" class="game-card">
+            <img src="images (2).jpg" alt="Total War">
+            <div class="game-card-title">
+                Total War
+            </div>
+        </a>
+
+        <a href="#" class="game-card">
+            <img src="images (3).png" alt="GTA">
+            <div class="game-card-title">
+                GRAND THEFT AUTO
+            </div>
+        </a>
+
+                <a href="#" class="game-card">
+            <img src="images (4).jpg" alt="Counter-Strike">
+            <div class="game-card-title">
+                Counter-Strike
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Підвал -->
+    <footer class="footer">
+
+    <h3>Автори проєкту</h3>
+
+    <div class="author">
+        Павловський Тарас
+        <span class="tooltip"><a class="canal" href="https://www.youtube.com/@timeman-x" target="_blank">Мій канал</a></span>
+    </div>
+
+    <div class="author">
+        Талащук Максим
+        <span class="tooltip">+++++----+++</span>
+    </div>
+
+    <div class="author">
+        Ярмушко Артем
+        <span class="tooltip">///*****///////--</span>
+    </div>
+
+    <div class="footer-copy">
+        © 2026 GameFinder
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
